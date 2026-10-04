@@ -1,58 +1,106 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Giới Thiệu Cá Nhân - Lab 5</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f9; color: #333; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1, h2 { color: #0056b3; text-align: center; }
-        .profile { background: #e9ecef; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
-        img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 15px auto; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 20px 0; }
-        .video-container iframe { position: absolute; top:0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
-        .btn { display: inline-block; padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; }
-        .footer { font-size: 0.9em; color: #777; margin-top: 30px; border-top: 1px solid #ddd; padding-top: 10px; text-align: center; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nguyễn Gia Minh - Sản phẩm Lab 05</title>
+<meta name="description" content="Trang giới thiệu cá nhân và 3 sản phẩm của Lab 05 - CT005">
+<style>
+  :root {
+    --bg: #f3f6f9;
+    --card: #ffffff;
+    --ink: #1b2733;
+    --muted: #5b6b7a;
+    --accent: #0b5cab;
+    --line: #d5dde5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  main { max-width: 860px; margin: 0 auto; padding: 32px 20px 48px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; color: var(--accent); }
+  .lead { margin: 0 0 28px; color: var(--muted); }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+  }
+  h2 { font-size: 1.25rem; margin: 0 0 12px; }
+  dl { margin: 0; display: grid; grid-template-columns: 140px 1fr; gap: 6px 12px; }
+  dt { font-weight: 600; }
+  dd { margin: 0; }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  .btn:hover, .btn:focus-visible { background: #08467f; }
+  .btn:focus-visible, iframe:focus-visible { outline: 3px solid #f2b705; outline-offset: 2px; }
+  img { max-width: 100%; height: auto; border-radius: 6px; display: block; }
+  .video { position: relative; aspect-ratio: 16 / 9; }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 6px; }
+  .note { font-size: 0.9rem; color: var(--muted); margin: 10px 0 0; }
+  footer { font-size: 0.9rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+  footer p { margin: 4px 0; }
+  @media (max-width: 520px) { dl { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>TRANG GIỚI THIỆU CÁ NHÂN & SẢN PHẨM LAB 05</h1>
-        
-        <!-- Thông tin cá nhân -->
-        <div class="profile">
-            <h3>Thông Tin Sinh Viên</h3>
-            <p><strong>Họ và tên:</strong> Nguyễn Gia Minh
-</p>
-            <p><strong>MSSV:</strong> minhb2605438</p>
-            <p><strong>Lớp học phần:</strong> 26-27hk1-ct005d05</p>
-        </div>
+<main>
+  <header>
+    <h1>Nguyễn Gia Minh</h1>
+    <p class="lead">Trang giới thiệu cá nhân và các sản phẩm của Lab 05, học phần CT005.</p>
+  </header>
 
-        <!-- Sản phẩm 1: File Word/DOCX -->
-        <h2>1. Báo Cáo Nhiệm Vụ 1.2</h2>
-        <p style="text-align: center;">
-            <!-- Khớp chính xác tên file Lab05_Ex1.2 của bạn -->
-            <a href="Lab05_Ex1.2.docx" target="_blank" class="btn">Xem / Tải về Báo Cáo (Word)</a>
-        </p>
+  <section>
+    <h2>Thông tin sinh viên</h2>
+    <dl>
+      <dt>Họ và tên</dt><dd>Nguyễn Gia Minh</dd>
+      <dt>MSSV</dt><dd>B2605438</dd>
+      <dt>Lớp học phần</dt><dd>CT-005</dd>
+    </dl>
+  </section>
 
-        <!-- Sản phẩm 2: File PNG Infographic -->
-        <h2>2. Infographic Nhiệm Vụ 2.1</h2>
-        <!-- Khớp chính xác tên file Lab05_Ex2.1 của bạn -->
-        <img src="Lab05_Ex2.1.png" alt="Infographic Lợi ích công nghệ số">
+  <section>
+    <h2>Báo cáo nhiệm vụ 1.2</h2>
+    <p>Báo cáo dạng PDF, mở trong tab mới hoặc tải về máy.</p>
+    <a class="btn" href="Lab05_Ex1.2.pdf" target="_blank" rel="noopener">Xem báo cáo (PDF)</a>
+  </section>
 
-        <!-- Sản phẩm 3: Video YouTube -->
-        <h2>3. Video Giới Thiệu Nhiệm Vụ 2.2</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube-nocookie.com/embed/yFz3naqfoKg" title="Lab05 Video" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <p style="text-align: center;">
-            <a href="https://youtube.com/shorts/yFz3naqfoKg?feature=share" target="_blank" class="btn" style="background-color: #ff0000;">Xem trực tiếp trên YouTube Shorts</a>
-        </p>
+  <section>
+    <h2>Infographic nhiệm vụ 2.1: Lợi ích của công nghệ</h2>
+    <img src="Lab05_Ex2.1.png" alt="Infographic về lợi ích của công nghệ">
+    <p class="note">Infographic được tạo với sự hỗ trợ của công cụ AI.</p>
+  </section>
 
-        <div class="footer">
-            <p><strong>Ghi chú bản quyền:</strong> Trang web và nội dung được hỗ trợ tạo bởi AI (GitHub Copilot/CapCut). Tài liệu sử dụng từ Pexels/FreeSound (CC0).</p>
-        </div>
+  <section>
+    <h2>Video YouTube nhiệm vụ 2.2</h2>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/yFz3naqfoKg"
+              title="Video YouTube của Lab 05"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
     </div>
+    <p class="note">Nếu video không hiện, xem tại
+      <a href="https://youtube.com/shorts/yFz3naqfoKg" target="_blank" rel="noopener">liên kết YouTube</a>.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Nguyễn Gia Minh. Bản quyền các sản phẩm thuộc về tác giả.</p>
+    <p>Ghi chú AI: trang HTML, infographic và video có sử dụng công cụ AI hỗ trợ, đã được tác giả kiểm tra và chỉnh sửa.</p>
+  </footer>
+</main>
 </body>
 </html>
